@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace projectef.Models;
 
@@ -24,6 +25,7 @@ public class Tarea
 
     //NoteMapped para no introducir este atributo en la bd. Solo estará virtualmente
     //[NotMapped]
+    [JsonIgnore]
     public string Resumen{get;set;}
 
 }
